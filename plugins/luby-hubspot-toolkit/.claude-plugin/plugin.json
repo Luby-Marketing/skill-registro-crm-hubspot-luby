@@ -1,0 +1,18 @@
+{
+  "name": "luby-hubspot-toolkit",
+  "version": "3.0.0",
+  "description": "Ferramentas da Luby para o HubSpot. v3: skill registro-crm-hubspot-luby, que lê os e-mails e as conversas do vendedor e propõe o registro nos funis Leads BR/US e de venda BR/US, seguindo a GMUD, o Funil de Leads e o Guia do Account (nov/2026). Nada é gravado sem aprovação do vendedor. Mantido por Karime Kumagai (Luby Growth).",
+  "author": {
+    "name": "Karime Arrigo Kumagai",
+    "url": "https://luby.com.br"
+  },
+  "keywords": [
+    "hubspot",
+    "crm",
+    "vendas",
+    "funil",
+    "leads",
+    "registro",
+    "aprovacao-humana"
+  ]
+}

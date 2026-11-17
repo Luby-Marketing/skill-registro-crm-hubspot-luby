@@ -1,0 +1,5 @@
+# Pacotes gerados para envio por e-mail
+*.zip
+
+# Saídas de teste
+evals/results/

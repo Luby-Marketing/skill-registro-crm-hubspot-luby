@@ -1,0 +1,14 @@
+{
+  "name": "luby-hubspot",
+  "owner": {
+    "name": "Luby"
+  },
+  "description": "Marketplace da Luby para o HubSpot: ferramentas para o time comercial registrar leads e negócios no CRM sem digitar, sempre com aprovação humana.",
+  "plugins": [
+    {
+      "name": "luby-hubspot-toolkit",
+      "source": "./plugins/luby-hubspot-toolkit",
+      "description": "Registro no HubSpot a partir dos e-mails e conversas do vendedor, nos funis Leads BR/US e de venda BR/US, em pt-BR e só com aprovação."
+    }
+  ]
+}
