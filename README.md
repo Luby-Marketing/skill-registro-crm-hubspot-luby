@@ -14,12 +14,15 @@ As regras seguem a GMUD do HubSpot (nov/2026), o Funil de Leads (11/11/2026) e o
 
 ### Time comercial (Claude app e claude.ai)
 
-A skill chega pelo catálogo de plugins da organização, sincronizado com este repositório. Quem usa não precisa de acesso ao GitHub e recebe cada versão nova sozinho.
+A skill entra como um marketplace ligado a este repositório. Com a sincronização automática ligada, cada versão nova publicada aqui chega sozinha.
 
-1. Em **Customize > Plugins**, procure **luby-hubspot-toolkit** e instale. Se o admin deixou o plugin instalado por padrão, ele já aparece ativo.
-2. Peça em linguagem natural (veja "Como chamar").
+1. Em **Plugins**, clique em **Adicionar** > **Adicionar marketplace** > **Adicionar de um repositório**.
+2. Cole o link do repositório: `https://github.com/Luby-Marketing/skill-registro-crm-hubspot-luby`.
+3. Ligue **Sincronizar automaticamente**.
+4. Clique em **Sincronizar**.
+5. Peça em linguagem natural (veja "Como chamar").
 
-**Configuração do admin, uma vez:** em **Organization settings > Plugins & skills > Add > Sync from GitHub**, escolha o repositório `Luby-Marketing/skill-registro-crm-hubspot-luby`, deixe **Sync automatically** ligado e defina a disponibilidade (disponível, instalado por padrão ou obrigatório). Se o repositório não aparecer na lista, instale o app do Claude no GitHub para ele. Com a sincronização automática, cada push na `main` atualiza o plugin para toda a organização.
+O repositório é público: não precisa de conta nem de acesso no GitHub.
 
 ### Claude Code
 
@@ -31,8 +34,6 @@ A skill chega pelo catálogo de plugins da organização, sincronizado com este 
 /plugin install luby-hubspot-toolkit@luby-hubspot
 ```
 
-O repositório é privado: quem instala precisa ter acesso a ele no GitHub e credencial do git na máquina (`gh auth login` e depois `gh auth setup-git`).
-
 Para receber as versões novas sozinho, ligue a atualização automática uma vez: em `/plugin`, aba **Marketplaces**, selecione `luby-hubspot` e escolha **Enable auto-update**. A atualização é baixada alguns minutos depois do início da sessão e passa a valer na sessão seguinte (ou depois de `/reload-plugins`). Para atualizar na hora:
 
 ```
@@ -41,7 +42,7 @@ Para receber as versões novas sozinho, ligue a atualização automática uma ve
 
 ### Zip, só se não houver outra forma
 
-Para quem está fora da organização, dá para enviar um `.zip` com a pasta `registro-crm-hubspot-luby` (e o `SKILL.md` dentro) em **Customize > Skills**. Esse caminho **não se atualiza**: cada versão nova exige um novo envio.
+Se não der para adicionar o marketplace, dá para enviar um `.zip` com a pasta `registro-crm-hubspot-luby` (e o `SKILL.md` dentro) em **Customize > Skills**. Esse caminho **não se atualiza**: cada versão nova exige um novo envio.
 
 ## Como chamar
 
@@ -67,7 +68,7 @@ Toda mudança que precisa chegar ao time segue estes passos:
 3. Registre a mudança no [`CHANGELOG.md`](CHANGELOG.md).
 4. Faça o commit na `main`, crie a tag `vX.Y.Z` e envie: `git push` e `git push --tags`.
 
-O push na `main` dispara a sincronização do catálogo da organização. A documentação não diz se essa sincronização também depende do número de versão, por isso a regra é subir a versão sempre.
+O push na `main` chega a quem ligou **Sincronizar automaticamente** no Claude. A documentação não diz se essa sincronização também depende do número de versão, por isso a regra é subir a versão sempre.
 
 Antes de enviar, dá para conferir a estrutura com `claude plugin validate .`.
 
